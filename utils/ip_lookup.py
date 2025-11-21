@@ -45,7 +45,7 @@ def lookup_ip(ip_address):
     url = f"https://ipapi.co/{ip_address}/json/"
 
     try:
-        response = requests.get(url, timeout=5)
+        response = requests.get(url, timeout=10)
         if not response.ok:
             return {"error": f"HTTP error {response.status_code}"}
 
